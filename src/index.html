@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipee - Discover Nutritious Recipes & Culinary Inspiration</title>
+    <meta
+      name="description"
+      content="Explore delicious and nutritious recipes, cooking tips, and culinary adventures. Join our community of food lovers and discover your next favorite dish."
+    />
+    <meta name="author" content="Recipee" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Recipee - Nutritious Recipes & Culinary Inspiration"
+    />
+    <meta
+      property="og:description"
+      content="Discover delicious recipes and join our culinary community"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="./img/logo.svg" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script type="module" src="./js/script.js"></script>
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- Header -->
+      <header class="header">
+        <div class="header__container">
+          <!-- Logo -->
+          <a href="/" class="header__logo-link" aria-label="Recipee homepage">
+            <img
+              class="header__logo"
+              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo.png"
+              alt="Recipee Logo"
+              width="125"
+              height="auto"
+              loading="eager"
+            />
+          </a>
+
+          <!-- Navigation -->
+          <div class="header__nav-wrapper">
+            <nav class="header__nav" aria-label="Main navigation">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a
+                    href="/"
+                    class="header__nav-link header__nav-link--active"
+                    aria-current="page"
+                    >Home</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="/about-me" class="header__nav-link">About me</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="/recipe" class="header__nav-link">Recipes</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="/categories" class="header__nav-link">Categories</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="/news" class="header__nav-link">News</a>
+                </li>
+              </ul>
+              <div class="header__cart">
+                <a
+                  href="#"
+                  class="header__cart-link"
+                  role="button"
+                  aria-haspopup="dialog"
+                  aria-label="Open shopping cart (empty)"
+                >
+                  <span>Cart</span>
+                </a>
+              </div>
+            </nav>
+          </div>
+
+          <!-- Header Actions -->
+          <div class="header__actions">
+            <button
+              class="header__menu-toggle"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <img
+                class="header__menu-icon"
+                src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c146_icon-menu.svg"
+                alt=""
+                aria-hidden="true"
+                width="30"
+                height="30"
+                loading="lazy"
+              />
+            </button>
+            <a href="/contact" class="button">
+              <span class="button__content">
+                <span class="button__text">Contact me</span>
+                <span class="button__icon-wrapper">
+                  <img
+                    class="button__icon"
+                    src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501d777e97e1de57908741e_arrow.svg"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                  />
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="header__overlay" id="mobile-menu" aria-hidden="true"></div>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+          <div class="hero__container">
+            <div class="hero__grid">
+              <!-- Hero Content -->
+              <div class="hero__content">
+                <div class="tag">
+                  <span class="tag__bullet" aria-hidden="true"></span>
+                  <span class="tag__text">Welcome to Recipa</span>
+                </div>
+
+                <h1 class="hero__title">
+                  Come, let's savor the goodness of my
+                  <span class="hero__title-highlight">nutritious.</span>
+                </h1>
+
+                <p class="hero__description">
+                  Discover the art of cooking nutritious and mouthwatering
+                  dishes with me.
+                </p>
+
+                <div class="hero__cta">
+                  <a href="/contact" class="button">
+                    <span class="button__content">
+                      <span class="button__text">Contact me</span>
+                      <span class="button__icon-wrapper">
+                        <img
+                          class="button__icon"
+                          src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501d777e97e1de57908741e_arrow.svg"
+                          alt=""
+                          aria-hidden="true"
+                          loading="lazy"
+                        />
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Hero Image -->
+              <div class="hero__image-container">
+                <img
+                  class="hero__image"
+                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501d65c4ca71937e4aa4956_main.jpg"
+                  alt="Delicious nutritious food beautifully presented"
+                  width="520"
+                  height="520"
+                  loading="eager"
+                />
+                <a
+                  href="#"
+                  class="hero__play-button"
+                  aria-label="Play introduction video"
+                >
+                  <img
+                    class="hero__play-icon"
+                    src="https://cdn.prod.website-files.com/5f5a2af98aaba033a0d3c78d/5f5a2af98aaba062f5d3c7dc_play-filled.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="17"
+                    height="17"
+                    loading="lazy"
+                  />
+                </a>
+                <img
+                  class="hero__decoration"
+                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6502d532056aa512d4962996_tomato.png"
+                  alt=""
+                  aria-hidden="true"
+                  width="70"
+                  height="70"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Featured Section -->
+        <section class="featured">
+          <div class="featured__container">
+            <div class="featured__grid">
+              <div class="featured__header">
+                <div class="tag">
+                  <span class="tag__bullet" aria-hidden="true"></span>
+                  <span class="tag__text">Featured on</span>
+                </div>
+              </div>
+
+              <div
+                class="featured__logos"
+                role="list"
+                aria-label="Media partners"
+              >
+                <img
+                  class="featured__logo"
+                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6554e9936483aff6a6fb2495_logo-3.svg"
+                  alt="Media partner 1 logo"
+                  width="140"
+                  height="auto"
+                  loading="lazy"
+                  role="listitem"
+                />
+                <img
+                  class="featured__logo"
+                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6554e993ba9b6474c62e713e_logo-5.svg"
+                  alt="Media partner 2 logo"
+                  width="130"
+                  height="auto"
+                  loading="lazy"
+                  role="listitem"
+                />
+                <img
+                  class="featured__logo"
+                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6554e997d16ce48b7668f9f7_logo-1.svg"
+                  alt="Media partner 3 logo"
+                  width="120"
+                  height="auto"
+                  loading="lazy"
+                  role="listitem"
+                />
+                <img
+                  class="featured__logo"
+                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6554e9958709782214641d0d_logo-9.svg"
+                  alt="Media partner 4 logo"
+                  width="110"
+                  height="auto"
+                  loading="lazy"
+                  role="listitem"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="section">
+          <div class="section__container">
+            <header class="section__header section__header--center">
+              <div class="tag tag--center">
+                <span class="tag__bullet" aria-hidden="true"></span>
+                <span class="tag__text">Browse recipes by category</span>
+              </div>
+              <h2 class="heading heading--large">
+                Recipes <span class="heading__highlight">categories.</span>
+              </h2>
+            </header>
+
+            <div class="section__content">
+              <div class="categories">
+                <article class="category-card">
+                  <a
+                    href="/recipe-categories/breakfast"
+                    class="category-card__link"
+                  >
+                    <img
+                      class="category-card__icon"
+                      src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2d1ff8db94df5297188_icons8-bread-240.png"
+                      alt="Bread icon"
+                      width="60"
+                      height="60"
+                    />
+                    <h3 class="category-card__title">Breakfast</h3>
+                  </a>
+                </article>
+
+                <article class="category-card">
+                  <a
+                    href="/recipe-categories/lunch"
+                    class="category-card__link"
+                  >
+                    <img
+                      class="category-card__icon"
+                      src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png"
+                      alt="Pizza icon"
+                      width="60"
+                      height="60"
+                    />
+                    <h3 class="category-card__title">Lunch</h3>
+                  </a>
+                </article>
+
+                <article class="category-card">
+                  <a
+                    href="/recipe-categories/drink"
+                    class="category-card__link"
+                  >
+                    <img
+                      class="category-card__icon"
+                      src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e314a55677b935bd3113_icons8-the-toast-240.png"
+                      alt="Drink icon"
+                      width="60"
+                      height="60"
+                    />
+                    <h3 class="category-card__title">Drink</h3>
+                  </a>
+                </article>
+
+                <article class="category-card">
+                  <a
+                    href="/recipe-categories/dessert"
+                    class="category-card__link"
+                  >
+                    <img
+                      class="category-card__icon"
+                      src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e33c6ae3d69baf126f5a_icons8-cake-240.png"
+                      alt="Dessert icon"
+                      width="60"
+                      height="60"
+                    />
+                    <h3 class="category-card__title">Dessert</h3>
+                  </a>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Latest Recipe Section -->
+        <section class="section section--light">
+          <div class="section__container">
+            <header class="section__header section__header--flex">
+              <div class="section__header-content">
+                <h2 class="heading heading--large">
+                  Latest <span class="heading__highlight">recipes.</span>
+                </h2>
+              </div>
+              <div class="section__header-action">
+                <a href="/recipes" class="button">
+                  <span class="button__content">
+                    <span class="button__text">All Recipes</span>
+                    <span class="button__icon-wrapper">
+                      <img
+                        class="button__icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501d777e97e1de57908741e_arrow.svg"
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                      />
+                    </span>
+                  </span>
+                </a>
+              </div>
+            </header>
+
+            <div class="section__content">
+              <div class="tabs">
+                <nav class="tabs__nav" role="tablist">
+                  <button
+                    class="tabs__button tabs__button--active"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="latest-recipes"
+                  >
+                    Latest Recipes
+                  </button>
+                  <button
+                    class="tabs__button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="featured-recipes"
+                  >
+                    <img
+                      class="tabs__icon"
+                      src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6502f1d8f7432925aad72a97_featured.png"
+                      alt="Featured Icon"
+                      loading="lazy"
+                    />
+                    Featured Recipes
+                  </button>
+                </nav>
+
+                <div class="tabs__content">
+                  <div
+                    class="tabs__panel tabs__panel--active"
+                    id="latest-recipes"
+                    role="tabpanel"
+                  >
+                    <!-- Add recipe dynamicly -->
+                    <div class="recipes">
+                      <article class="recipe-card">
+                        <div class="recipe-card__badge">
+                          <a href="/recipe-categories/lunch" class="badge">
+                            <img
+                              class="badge__icon"
+                              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png"
+                              alt=""
+                              width="27"
+                              height="27"
+                            />
+                            <span class="badge__text">Lunch</span>
+                          </a>
+                        </div>
+
+                        <a
+                          href="/recipe/vegan-quinoa"
+                          class="recipe-card__link"
+                        >
+                          <div class="recipe-card__image-wrapper">
+                            <img
+                              class="recipe-card__image"
+                              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6503065aadfb7f95ff74e9a8_recipe-4.jpg"
+                              alt="Vegan quinoa recipe"
+                              loading="lazy"
+                            />
+
+                            <div class="recipe-card__info">
+                              <div class="recipe-meta">
+                                <img
+                                  class="recipe-meta__icon"
+                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650300cba3d8f08049ff6aed_schedule_FILL0_wght300_GRAD0_opsz24.svg"
+                                  alt=""
+                                  width="27"
+                                  height="27"
+                                />
+                                <span class="recipe-meta__text">20min</span>
+                              </div>
+
+                              <div class="recipe-meta">
+                                <img
+                                  class="recipe-meta__icon"
+                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/65030090282cb8dc8d551130_account_circle_FILL0_wght300_GRAD0_opsz24.svg"
+                                  alt=""
+                                  width="27"
+                                  height="27"
+                                />
+                                <span class="recipe-meta__text"
+                                  >4 Servings</span
+                                >
+                              </div>
+
+                              <div class="recipe-meta">
+                                <img
+                                  class="recipe-meta__icon"
+                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/65030140cda3526d9edcd88b_signal_cellular_alt_FILL0_wght300_GRAD0_opsz24.svg"
+                                  alt=""
+                                  width="27"
+                                  height="27"
+                                />
+                                <span class="recipe-meta__text">Medium</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="recipe-card__content">
+                            <h3 class="recipe-card__title">Vegan quinoa</h3>
+                            <p class="recipe-card__description">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit.
+                            </p>
+                            <div class="link-underline">
+                              <span class="link-underline__text"
+                                >View Recipe</span
+                              >
+                              <span class="link-underline__line"></span>
+                            </div>
+                          </div>
+                        </a>
+                      </article>
+                      <article class="recipe-card">
+                        <div class="recipe-card__badge">
+                          <a href="/recipe-categories/lunch" class="badge">
+                            <img
+                              class="badge__icon"
+                              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png"
+                              alt=""
+                              width="27"
+                              height="27"
+                            />
+                            <span class="badge__text">Lunch</span>
+                          </a>
+                        </div>
+
+                        <a
+                          href="/recipe/vegan-quinoa"
+                          class="recipe-card__link"
+                        >
+                          <div class="recipe-card__image-wrapper">
+                            <img
+                              class="recipe-card__image"
+                              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6503065aadfb7f95ff74e9a8_recipe-4.jpg"
+                              alt="Vegan quinoa recipe"
+                              loading="lazy"
+                            />
+
+                            <div class="recipe-card__info">
+                              <div class="recipe-meta">
+                                <img
+                                  class="recipe-meta__icon"
+                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650300cba3d8f08049ff6aed_schedule_FILL0_wght300_GRAD0_opsz24.svg"
+                                  alt=""
+                                  width="27"
+                                  height="27"
+                                />
+                                <span class="recipe-meta__text">20min</span>
+                              </div>
+
+                              <div class="recipe-meta">
+                                <img
+                                  class="recipe-meta__icon"
+                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/65030090282cb8dc8d551130_account_circle_FILL0_wght300_GRAD0_opsz24.svg"
+                                  alt=""
+                                  width="27"
+                                  height="27"
+                                />
+                                <span class="recipe-meta__text"
+                                  >4 Servings</span
+                                >
+                              </div>
+
+                              <div class="recipe-meta">
+                                <img
+                                  class="recipe-meta__icon"
+                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/65030140cda3526d9edcd88b_signal_cellular_alt_FILL0_wght300_GRAD0_opsz24.svg"
+                                  alt=""
+                                  width="27"
+                                  height="27"
+                                />
+                                <span class="recipe-meta__text">Medium</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="recipe-card__content">
+                            <h3 class="recipe-card__title">Vegan quinoa</h3>
+                            <p class="recipe-card__description">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit.
+                            </p>
+                            <div class="link-underline">
+                              <span class="link-underline__text"
+                                >View Recipe</span
+                              >
+                              <span class="link-underline__line"></span>
+                            </div>
+                          </div>
+                        </a>
+                      </article>
+                      <article class="recipe-card">
+                        <div class="recipe-card__badge">
+                          <a href="/recipe-categories/lunch" class="badge">
+                            <img
+                              class="badge__icon"
+                              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png"
+                              alt=""
+                              width="27"
+                              height="27"
+                            />
+                            <span class="badge__text">Lunch</span>
+                          </a>
+                        </div>
+
+                        <a
+                          href="/recipe/vegan-quinoa"
+                          class="recipe-card__link"
+                        >
+                          <div class="recipe-card__image-wrapper">
+                            <img
+                              class="recipe-card__image"
+                              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6503065aadfb7f95ff74e9a8_recipe-4.jpg"
+                              alt="Vegan quinoa recipe"
+                              loading="lazy"
+                            />
+
+                            <div class="recipe-card__info">
+                              <div class="recipe-meta">
+                                <img
+                                  class="recipe-meta__icon"
+                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650300cba3d8f08049ff6aed_schedule_FILL0_wght300_GRAD0_opsz24.svg"
+                                  alt=""
+                                  width="27"
+                                  height="27"
+                                />
+                                <span class="recipe-meta__text">20min</span>
+                              </div>
+
+                              <div class="recipe-meta">
+                                <img
+                                  class="recipe-meta__icon"
+                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/65030090282cb8dc8d551130_account_circle_FILL0_wght300_GRAD0_opsz24.svg"
+                                  alt=""
+                                  width="27"
+                                  height="27"
+                                />
+                                <span class="recipe-meta__text"
+                                  >4 Servings</span
+                                >
+                              </div>
+
+                              <div class="recipe-meta">
+                                <img
+                                  class="recipe-meta__icon"
+                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/65030140cda3526d9edcd88b_signal_cellular_alt_FILL0_wght300_GRAD0_opsz24.svg"
+                                  alt=""
+                                  width="27"
+                                  height="27"
+                                />
+                                <span class="recipe-meta__text">Medium</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="recipe-card__content">
+                            <h3 class="recipe-card__title">Vegan quinoa</h3>
+                            <p class="recipe-card__description">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit.
+                            </p>
+                            <div class="link-underline">
+                              <span class="link-underline__text"
+                                >View Recipe</span
+                              >
+                              <span class="link-underline__line"></span>
+                            </div>
+                          </div>
+                        </a>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Recipe book -->
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <!-- Footer content will go here -->
+      </footer>
+    </div>
+  </body>
+</html>
