@@ -31,6 +31,7 @@
 
     <link rel="icon" href="./img/logo.svg" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/router.js"></script>
     <script type="module" src="./js/script.js"></script>
   </head>
 
@@ -40,7 +41,7 @@
       <header class="header">
         <div class="header__container">
           <!-- Logo -->
-          <a href="/" class="header__logo-link" aria-label="Recipee homepage">
+          <a href="/" class="header__logo-link" aria-label="Recipee homepage" data-link>
             <img
               class="header__logo"
               src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo.png"
@@ -60,20 +61,23 @@
                     href="/"
                     class="header__nav-link header__nav-link--active"
                     aria-current="page"
+                    data-link
                     >Home</a
                   >
                 </li>
                 <li class="header__nav-item">
-                  <a href="/about-me" class="header__nav-link">About me</a>
+                  <a href="/about" class="header__nav-link" data-link
+                    >About me</a
+                  >
                 </li>
                 <li class="header__nav-item">
-                  <a href="/recipe" class="header__nav-link">Recipes</a>
+                  <a href="/recipe" class="header__nav-link" data-link>Recipes</a>
                 </li>
                 <li class="header__nav-item">
-                  <a href="/categories" class="header__nav-link">Categories</a>
+                  <a href="/categories" class="header__nav-link" data-link>Categories</a>
                 </li>
                 <li class="header__nav-item">
-                  <a href="/news" class="header__nav-link">News</a>
+                  <a href="/news" class="header__nav-link" data-link>News</a>
                 </li>
               </ul>
               <div class="header__cart">
@@ -184,6 +188,7 @@
                   href="#"
                   class="hero__play-button"
                   aria-label="Play introduction video"
+                    data-link
                 >
                   <img
                     class="hero__play-icon"
@@ -285,6 +290,7 @@
                   <a
                     href="/recipe-categories/breakfast"
                     class="category-card__link"
+                      data-link
                   >
                     <img
                       class="category-card__icon"
@@ -301,6 +307,7 @@
                   <a
                     href="/recipe-categories/lunch"
                     class="category-card__link"
+                      data-link
                   >
                     <img
                       class="category-card__icon"
@@ -317,6 +324,7 @@
                   <a
                     href="/recipe-categories/drink"
                     class="category-card__link"
+                      data-link
                   >
                     <img
                       class="category-card__icon"
@@ -333,6 +341,7 @@
                   <a
                     href="/recipe-categories/dessert"
                     class="category-card__link"
+                      data-link
                   >
                     <img
                       class="category-card__icon"
@@ -414,6 +423,7 @@
                       <article class="recipe-card">
                         <div class="recipe-card__badge">
                           <a href="/recipe-categories/lunch" class="badge">
+                            <a href="/recipe-categories/lunch" class="badge" data-link>
                             <img
                               class="badge__icon"
                               src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png"
@@ -428,6 +438,7 @@
                         <a
                           href="/recipe/vegan-quinoa"
                           class="recipe-card__link"
+                            data-link
                         >
                           <div class="recipe-card__image-wrapper">
                             <img
@@ -730,7 +741,7 @@
                 </h2>
 
                 <div class="about-section__action">
-                  <a href="/about-me" class="button">
+                  <a href="/about" data-link class="button">
                     <span class="button__content">
                       <span class="button__text">Learn more</span>
                       <span class="button__icon-wrapper">
@@ -994,26 +1005,26 @@
               <div class="footer__nav-column">
                 <h3 class="footer__title">Navigation</h3>
                 <ul class="footer__nav-list">
+                      <li class="footer__nav-item">
+                        <a href="/" class="footer__link" data-link>Home</a>
+                      </li>
                   <li class="footer__nav-item">
-                    <a href="/" class="footer__link">Home</a>
+                    <a href="/about-me" class="footer__link" data-link>About me</a>
                   </li>
                   <li class="footer__nav-item">
-                    <a href="/about-me" class="footer__link">About me</a>
+                    <a href="/shop" class="footer__link" data-link>Shop</a>
                   </li>
                   <li class="footer__nav-item">
-                    <a href="/shop" class="footer__link">Shop</a>
+                    <a href="/recipe" class="footer__link" data-link>Recipes</a>
                   </li>
                   <li class="footer__nav-item">
-                    <a href="/recipe" class="footer__link">Recipes</a>
+                    <a href="/style-guide" class="footer__link" data-link>Style Guide</a>
                   </li>
                   <li class="footer__nav-item">
-                    <a href="/style-guide" class="footer__link">Style Guide</a>
+                    <a href="/licensing" class="footer__link" data-link>Licensing</a>
                   </li>
                   <li class="footer__nav-item">
-                    <a href="/licensing" class="footer__link">Licensing</a>
-                  </li>
-                  <li class="footer__nav-item">
-                    <a href="/legal" class="footer__link">Legal</a>
+                    <a href="/legal" class="footer__link" data-link>Legal</a>
                   </li>
                 </ul>
               </div>

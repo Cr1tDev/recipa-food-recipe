@@ -587,6 +587,7 @@ button {
 .category-card__link:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 10px var(--color-shadow);
+  filter: hue-rotate(180deg);
 }
 
 .category-card__icon {
@@ -702,11 +703,6 @@ button {
   transition: all var(--transition-base);
 }
 
-.recipe-card__link:hover {
-  box-shadow: 0 10px 30px var(--color-shadow);
-  transform: translateY(-5px);
-}
-
 .recipe-card__image-wrapper {
   position: relative;
   overflow: hidden;
@@ -722,7 +718,7 @@ button {
 }
 
 .recipe-card__link:hover .recipe-card__image {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .recipe-card__info {
@@ -1122,10 +1118,6 @@ button {
 .app-download__link {
   display: inline-block;
   transition: transform var(--transition-base);
-}
-
-.app-download__link:hover {
-  transform: translateY(-3px);
 }
 
 .app-download__link img {
