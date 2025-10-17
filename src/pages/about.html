@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipee - Discover Nutritious Recipes & Culinary Inspiration</title>
+    <meta
+      name="description"
+      content="Explore delicious and nutritious recipes, cooking tips, and culinary adventures. Join our community of food lovers and discover your next favorite dish."
+    />
+    <meta name="author" content="Recipee" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Recipee - Nutritious Recipes & Culinary Inspiration"
+    />
+    <meta
+      property="og:description"
+      content="Discover delicious recipes and join our culinary community"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- Header -->
+      <header class="header">
+        <div class="header__container">
+          <!-- Logo -->
+          <a
+            href="/"
+            class="header__logo-link"
+            aria-label="Recipee homepage"
+            data-link
+          >
+            <img
+              class="header__logo"
+              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo.png"
+              alt="Recipee Logo"
+              width="125"
+              height="auto"
+              loading="eager"
+            />
+          </a>
+
+          <!-- Navigation -->
+          <div class="header__nav-wrapper">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a
+                    href="/"
+                    class="header__nav-link header__nav-link--active"
+                    aria-current="page"
+                    data-link
+                    >Home</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="/about" class="header__nav-link" data-link
+                    >About me</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="/recipe" class="header__nav-link" data-link
+                    >Recipes</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="/categories" class="header__nav-link" data-link
+                    >Categories</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="/news" class="header__nav-link" data-link>News</a>
+                </li>
+              </ul>
+              <div class="header__cart">
+                <a
+                  href="#"
+                  class="header__cart-link"
+                  role="button"
+                  aria-haspopup="dialog"
+                  aria-label="Open shopping cart (empty)"
+                >
+                  <span>Cart</span>
+                </a>
+              </div>
+            </nav>
+          </div>
+
+          <!-- Header Actions -->
+          <div class="header__actions">
+            <button
+              class="header__menu-toggle"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <img
+                class="header__menu-icon"
+                src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c146_icon-menu.svg"
+                alt=""
+                aria-hidden="true"
+                width="30"
+                height="30"
+                loading="lazy"
+              />
+            </button>
+            <a href="/contact" class="button">
+              <span class="button__content">
+                <span class="button__text">Contact me</span>
+                <span class="button__icon-wrapper">
+                  <img
+                    class="button__icon"
+                    src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501d777e97e1de57908741e_arrow.svg"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                  />
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="header__overlay" id="mobile-menu" aria-hidden="true"></div>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <section class="section">
+          <div class="section__container">
+            <header class="section__header section__header--center">
+              <div class="tag tag--center">
+                <span class="tag__bullet" aria-hidden="true"></span>
+                <span class="tag__text">Get in Touch</span>
+              </div>
+              <h1 class="heading heading--large">
+                Contact <span class="heading__highlight">Me</span>
+              </h1>
+            </header>
+
+            <div class="section__content">
+              <div style="max-width: 600px; margin: 0 auto">
+                <p
+                  style="
+                    font-size: 1.125rem;
+                    line-height: 1.75;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                  "
+                >
+                  Have a question or want to collaborate? I'd love to hear from
+                  you!
+                </p>
+                <form
+                  style="display: flex; flex-direction: column; gap: 1.5rem"
+                >
+                  <div>
+                    <label
+                      style="
+                        display: block;
+                        margin-bottom: 0.5rem;
+                        font-weight: 500;
+                      "
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      style="
+                        width: 100%;
+                        padding: 0.75rem;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        font-size: 1rem;
+                      "
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      style="
+                        display: block;
+                        margin-bottom: 0.5rem;
+                        font-weight: 500;
+                      "
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      style="
+                        width: 100%;
+                        padding: 0.75rem;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        font-size: 1rem;
+                      "
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      style="
+                        display: block;
+                        margin-bottom: 0.5rem;
+                        font-weight: 500;
+                      "
+                      >Message</label
+                    >
+                    <textarea
+                      rows="5"
+                      style="
+                        width: 100%;
+                        padding: 0.75rem;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        font-size: 1rem;
+                        resize: vertical;
+                      "
+                      placeholder="Your message..."
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="button"
+                    style="align-self: flex-start"
+                  >
+                    <span class="button__content">
+                      <span class="button__text">Send Message</span>
+                    </span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__grid">
+            <!-- Footer Brand & Newsletter -->
+            <div class="footer__brand">
+              <a
+                href="/"
+                class="footer__logo-link"
+                aria-label="Recipee homepage"
+              >
+                <img
+                  class="footer__logo"
+                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo.png"
+                  alt="Recipee Logo"
+                  width="110"
+                  height="auto"
+                  loading="lazy"
+                  srcset="
+                    https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo-p-500.png 500w,
+                    https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo-p-800.png 800w,
+                    https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo.png       931w
+                  "
+                />
+              </a>
+
+              <p class="footer__description">
+                Join me on a gastronomic adventure filled with nutritious and
+                delicious recipes.
+              </p>
+
+              <!-- Newsletter -->
+              <div class="footer__newsletter">
+                <h3 class="footer__title">Sign up for our newsletter</h3>
+
+                <form
+                  class="newsletter-form"
+                  id="newsletter-form"
+                  action=""
+                  method="post"
+                >
+                  <div class="newsletter-form__wrapper">
+                    <input
+                      class="newsletter-form__input"
+                      type="email"
+                      name="email"
+                      id="newsletter-email"
+                      placeholder="Enter your email..."
+                      required
+                      aria-label="Email address"
+                    />
+                    <button
+                      type="submit"
+                      class="newsletter-form__button"
+                      aria-label="Subscribe to newsletter"
+                    >
+                      <span class="u-visually-hidden">Subscribe</span>
+                    </button>
+                  </div>
+
+                  <div class="newsletter-form__success" aria-live="polite">
+                    <p>Thank you! Your subscription has been received!</p>
+                  </div>
+
+                  <div class="newsletter-form__error" aria-live="assertive">
+                    <p>Oops! Something went wrong. Please try again.</p>
+                  </div>
+                </form>
+
+                <p class="footer__copyright">© This is powered by Recipee</p>
+              </div>
+            </div>
+
+            <!-- Footer Navigation -->
+            <nav class="footer__nav">
+              <div class="footer__nav-column">
+                <h3 class="footer__title">Navigation</h3>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item">
+                    <a href="/" class="footer__link" data-link>Home</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/about-me" class="footer__link" data-link
+                      >About me</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/shop" class="footer__link" data-link>Shop</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/recipe" class="footer__link" data-link>Recipes</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/style-guide" class="footer__link" data-link
+                      >Style Guide</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/licensing" class="footer__link" data-link
+                      >Licensing</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/legal" class="footer__link" data-link>Legal</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer__nav-column">
+                <h3 class="footer__title">Categories</h3>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item">
+                    <a
+                      href="/recipe-categories/dessert"
+                      class="footer__link footer__link--icon"
+                    >
+                      <img
+                        class="footer__link-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e33c6ae3d69baf126f5a_icons8-cake-240.png"
+                        alt=""
+                        width="28"
+                        height="28"
+                        loading="lazy"
+                      />
+                      <span>Dessert</span>
+                    </a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a
+                      href="/recipe-categories/drink"
+                      class="footer__link footer__link--icon"
+                    >
+                      <img
+                        class="footer__link-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e314a55677b935bd3113_icons8-the-toast-240.png"
+                        alt=""
+                        width="28"
+                        height="28"
+                        loading="lazy"
+                      />
+                      <span>Drink</span>
+                    </a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a
+                      href="/recipe-categories/lunch"
+                      class="footer__link footer__link--icon"
+                    >
+                      <img
+                        class="footer__link-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png"
+                        alt=""
+                        width="28"
+                        height="28"
+                        loading="lazy"
+                      />
+                      <span>Lunch</span>
+                    </a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a
+                      href="/recipe-categories/breakfast"
+                      class="footer__link footer__link--icon"
+                    >
+                      <img
+                        class="footer__link-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2d1ff8db94df5297188_icons8-bread-240.png"
+                        alt=""
+                        width="28"
+                        height="28"
+                        loading="lazy"
+                      />
+                      <span>Breakfast</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer__nav-column">
+                <h3 class="footer__title">Follow me</h3>
+                <ul class="footer__social">
+                  <li class="footer__social-item">
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer__social-link"
+                      aria-label="Follow us on Twitter"
+                    >
+                      <img
+                        class="footer__social-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c14b_x-logo.png"
+                        alt="Twitter"
+                        width="22"
+                        height="22"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer__social-link"
+                      aria-label="Follow us on Facebook"
+                    >
+                      <img
+                        class="footer__social-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c149_icons8-facebook-240%20(1).png"
+                        alt="Facebook"
+                        width="22"
+                        height="22"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer__social-link"
+                      aria-label="Follow us on Instagram"
+                    >
+                      <img
+                        class="footer__social-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c157_social-4.png"
+                        alt="Instagram"
+                        width="22"
+                        height="22"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a
+                      href="https://youtube.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer__social-link"
+                      aria-label="Follow us on YouTube"
+                    >
+                      <img
+                        class="footer__social-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c143_social-3.png"
+                        alt="YouTube"
+                        width="22"
+                        height="22"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

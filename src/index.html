@@ -31,7 +31,6 @@
 
     <link rel="icon" href="./img/logo.svg" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/router.js"></script>
     <script type="module" src="./js/script.js"></script>
   </head>
 
@@ -41,7 +40,12 @@
       <header class="header">
         <div class="header__container">
           <!-- Logo -->
-          <a href="/" class="header__logo-link" aria-label="Recipee homepage" data-link>
+          <a
+            href="/"
+            class="header__logo-link"
+            aria-label="Recipee homepage"
+            data-link
+          >
             <img
               class="header__logo"
               src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo.png"
@@ -71,10 +75,14 @@
                   >
                 </li>
                 <li class="header__nav-item">
-                  <a href="/recipe" class="header__nav-link" data-link>Recipes</a>
+                  <a href="/recipe" class="header__nav-link" data-link
+                    >Recipes</a
+                  >
                 </li>
                 <li class="header__nav-item">
-                  <a href="/categories" class="header__nav-link" data-link>Categories</a>
+                  <a href="/categories" class="header__nav-link" data-link
+                    >Categories</a
+                  >
                 </li>
                 <li class="header__nav-item">
                   <a href="/news" class="header__nav-link" data-link>News</a>
@@ -188,7 +196,7 @@
                   href="#"
                   class="hero__play-button"
                   aria-label="Play introduction video"
-                    data-link
+                  data-link
                 >
                   <img
                     class="hero__play-icon"
@@ -286,73 +294,7 @@
 
             <div class="section__content">
               <div class="categories">
-                <article class="category-card">
-                  <a
-                    href="/recipe-categories/breakfast"
-                    class="category-card__link"
-                      data-link
-                  >
-                    <img
-                      class="category-card__icon"
-                      src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2d1ff8db94df5297188_icons8-bread-240.png"
-                      alt="Bread icon"
-                      width="60"
-                      height="60"
-                    />
-                    <h3 class="category-card__title">Breakfast</h3>
-                  </a>
-                </article>
-
-                <article class="category-card">
-                  <a
-                    href="/recipe-categories/lunch"
-                    class="category-card__link"
-                      data-link
-                  >
-                    <img
-                      class="category-card__icon"
-                      src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png"
-                      alt="Pizza icon"
-                      width="60"
-                      height="60"
-                    />
-                    <h3 class="category-card__title">Lunch</h3>
-                  </a>
-                </article>
-
-                <article class="category-card">
-                  <a
-                    href="/recipe-categories/drink"
-                    class="category-card__link"
-                      data-link
-                  >
-                    <img
-                      class="category-card__icon"
-                      src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e314a55677b935bd3113_icons8-the-toast-240.png"
-                      alt="Drink icon"
-                      width="60"
-                      height="60"
-                    />
-                    <h3 class="category-card__title">Drink</h3>
-                  </a>
-                </article>
-
-                <article class="category-card">
-                  <a
-                    href="/recipe-categories/dessert"
-                    class="category-card__link"
-                      data-link
-                  >
-                    <img
-                      class="category-card__icon"
-                      src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e33c6ae3d69baf126f5a_icons8-cake-240.png"
-                      alt="Dessert icon"
-                      width="60"
-                      height="60"
-                    />
-                    <h3 class="category-card__title">Dessert</h3>
-                  </a>
-                </article>
+                <!-- Inser categories dynamicly -->
               </div>
             </div>
           </div>
@@ -419,247 +361,7 @@
                     role="tabpanel"
                   >
                     <!-- Add recipe dynamicly -->
-                    <div class="recipes">
-                      <article class="recipe-card">
-                        <div class="recipe-card__badge">
-                          <a href="/recipe-categories/lunch" class="badge">
-                            <a href="/recipe-categories/lunch" class="badge" data-link>
-                            <img
-                              class="badge__icon"
-                              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png"
-                              alt=""
-                              width="27"
-                              height="27"
-                            />
-                            <span class="badge__text">Lunch</span>
-                          </a>
-                        </div>
-
-                        <a
-                          href="/recipe/vegan-quinoa"
-                          class="recipe-card__link"
-                            data-link
-                        >
-                          <div class="recipe-card__image-wrapper">
-                            <img
-                              class="recipe-card__image"
-                              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6503065aadfb7f95ff74e9a8_recipe-4.jpg"
-                              alt="Vegan quinoa recipe"
-                              loading="lazy"
-                            />
-
-                            <div class="recipe-card__info">
-                              <div class="recipe-meta">
-                                <img
-                                  class="recipe-meta__icon"
-                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650300cba3d8f08049ff6aed_schedule_FILL0_wght300_GRAD0_opsz24.svg"
-                                  alt=""
-                                  width="27"
-                                  height="27"
-                                />
-                                <span class="recipe-meta__text">20min</span>
-                              </div>
-
-                              <div class="recipe-meta">
-                                <img
-                                  class="recipe-meta__icon"
-                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/65030090282cb8dc8d551130_account_circle_FILL0_wght300_GRAD0_opsz24.svg"
-                                  alt=""
-                                  width="27"
-                                  height="27"
-                                />
-                                <span class="recipe-meta__text"
-                                  >4 Servings</span
-                                >
-                              </div>
-
-                              <div class="recipe-meta">
-                                <img
-                                  class="recipe-meta__icon"
-                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/65030140cda3526d9edcd88b_signal_cellular_alt_FILL0_wght300_GRAD0_opsz24.svg"
-                                  alt=""
-                                  width="27"
-                                  height="27"
-                                />
-                                <span class="recipe-meta__text">Medium</span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="recipe-card__content">
-                            <h3 class="recipe-card__title">Vegan quinoa</h3>
-                            <p class="recipe-card__description">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit.
-                            </p>
-                            <div class="link-underline">
-                              <span class="link-underline__text"
-                                >View Recipe</span
-                              >
-                              <span class="link-underline__line"></span>
-                            </div>
-                          </div>
-                        </a>
-                      </article>
-                      <article class="recipe-card">
-                        <div class="recipe-card__badge">
-                          <a href="/recipe-categories/lunch" class="badge">
-                            <img
-                              class="badge__icon"
-                              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png"
-                              alt=""
-                              width="27"
-                              height="27"
-                            />
-                            <span class="badge__text">Lunch</span>
-                          </a>
-                        </div>
-
-                        <a
-                          href="/recipe/vegan-quinoa"
-                          class="recipe-card__link"
-                        >
-                          <div class="recipe-card__image-wrapper">
-                            <img
-                              class="recipe-card__image"
-                              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6503065aadfb7f95ff74e9a8_recipe-4.jpg"
-                              alt="Vegan quinoa recipe"
-                              loading="lazy"
-                            />
-
-                            <div class="recipe-card__info">
-                              <div class="recipe-meta">
-                                <img
-                                  class="recipe-meta__icon"
-                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650300cba3d8f08049ff6aed_schedule_FILL0_wght300_GRAD0_opsz24.svg"
-                                  alt=""
-                                  width="27"
-                                  height="27"
-                                />
-                                <span class="recipe-meta__text">20min</span>
-                              </div>
-
-                              <div class="recipe-meta">
-                                <img
-                                  class="recipe-meta__icon"
-                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/65030090282cb8dc8d551130_account_circle_FILL0_wght300_GRAD0_opsz24.svg"
-                                  alt=""
-                                  width="27"
-                                  height="27"
-                                />
-                                <span class="recipe-meta__text"
-                                  >4 Servings</span
-                                >
-                              </div>
-
-                              <div class="recipe-meta">
-                                <img
-                                  class="recipe-meta__icon"
-                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/65030140cda3526d9edcd88b_signal_cellular_alt_FILL0_wght300_GRAD0_opsz24.svg"
-                                  alt=""
-                                  width="27"
-                                  height="27"
-                                />
-                                <span class="recipe-meta__text">Medium</span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="recipe-card__content">
-                            <h3 class="recipe-card__title">Vegan quinoa</h3>
-                            <p class="recipe-card__description">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit.
-                            </p>
-                            <div class="link-underline">
-                              <span class="link-underline__text"
-                                >View Recipe</span
-                              >
-                              <span class="link-underline__line"></span>
-                            </div>
-                          </div>
-                        </a>
-                      </article>
-                      <article class="recipe-card">
-                        <div class="recipe-card__badge">
-                          <a href="/recipe-categories/lunch" class="badge">
-                            <img
-                              class="badge__icon"
-                              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png"
-                              alt=""
-                              width="27"
-                              height="27"
-                            />
-                            <span class="badge__text">Lunch</span>
-                          </a>
-                        </div>
-
-                        <a
-                          href="/recipe/vegan-quinoa"
-                          class="recipe-card__link"
-                        >
-                          <div class="recipe-card__image-wrapper">
-                            <img
-                              class="recipe-card__image"
-                              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6503065aadfb7f95ff74e9a8_recipe-4.jpg"
-                              alt="Vegan quinoa recipe"
-                              loading="lazy"
-                            />
-
-                            <div class="recipe-card__info">
-                              <div class="recipe-meta">
-                                <img
-                                  class="recipe-meta__icon"
-                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650300cba3d8f08049ff6aed_schedule_FILL0_wght300_GRAD0_opsz24.svg"
-                                  alt=""
-                                  width="27"
-                                  height="27"
-                                />
-                                <span class="recipe-meta__text">20min</span>
-                              </div>
-
-                              <div class="recipe-meta">
-                                <img
-                                  class="recipe-meta__icon"
-                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/65030090282cb8dc8d551130_account_circle_FILL0_wght300_GRAD0_opsz24.svg"
-                                  alt=""
-                                  width="27"
-                                  height="27"
-                                />
-                                <span class="recipe-meta__text"
-                                  >4 Servings</span
-                                >
-                              </div>
-
-                              <div class="recipe-meta">
-                                <img
-                                  class="recipe-meta__icon"
-                                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/65030140cda3526d9edcd88b_signal_cellular_alt_FILL0_wght300_GRAD0_opsz24.svg"
-                                  alt=""
-                                  width="27"
-                                  height="27"
-                                />
-                                <span class="recipe-meta__text">Medium</span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="recipe-card__content">
-                            <h3 class="recipe-card__title">Vegan quinoa</h3>
-                            <p class="recipe-card__description">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit.
-                            </p>
-                            <div class="link-underline">
-                              <span class="link-underline__text"
-                                >View Recipe</span
-                              >
-                              <span class="link-underline__line"></span>
-                            </div>
-                          </div>
-                        </a>
-                      </article>
-                    </div>
+                    <div class="recipes"></div>
                   </div>
                 </div>
               </div>
@@ -768,7 +470,7 @@
             <header class="section__header section__header--flex">
               <div class="section__header-content">
                 <h2 class="heading heading--large">
-                  My <span class="heading__highlight">insight</span>
+                  My <span class="heading__highlight">insight.</span>
                 </h2>
               </div>
               <div class="section__header-action">
@@ -1005,11 +707,13 @@
               <div class="footer__nav-column">
                 <h3 class="footer__title">Navigation</h3>
                 <ul class="footer__nav-list">
-                      <li class="footer__nav-item">
-                        <a href="/" class="footer__link" data-link>Home</a>
-                      </li>
                   <li class="footer__nav-item">
-                    <a href="/about-me" class="footer__link" data-link>About me</a>
+                    <a href="/" class="footer__link" data-link>Home</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/about-me" class="footer__link" data-link
+                      >About me</a
+                    >
                   </li>
                   <li class="footer__nav-item">
                     <a href="/shop" class="footer__link" data-link>Shop</a>
@@ -1018,10 +722,14 @@
                     <a href="/recipe" class="footer__link" data-link>Recipes</a>
                   </li>
                   <li class="footer__nav-item">
-                    <a href="/style-guide" class="footer__link" data-link>Style Guide</a>
+                    <a href="/style-guide" class="footer__link" data-link
+                      >Style Guide</a
+                    >
                   </li>
                   <li class="footer__nav-item">
-                    <a href="/licensing" class="footer__link" data-link>Licensing</a>
+                    <a href="/licensing" class="footer__link" data-link
+                      >Licensing</a
+                    >
                   </li>
                   <li class="footer__nav-item">
                     <a href="/legal" class="footer__link" data-link>Legal</a>
