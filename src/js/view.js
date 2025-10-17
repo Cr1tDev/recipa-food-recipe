@@ -73,32 +73,31 @@ class View {
   // Recipe Card Generator
   // =======================
   _generateRecipeCard(recipe) {
-    console.log(recipe);
     const getCategoryInfo = () => {
-      if (recipe.dishTypes?.includes('breakfast'))
+      if (recipe.category?.includes('breakfast'))
         return {
           name: 'Breakfast',
           icon: 'https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2d1ff8db94df5297188_icons8-bread-240.png',
           url: '/recipe-categories/breakfast',
         };
       if (
-        recipe.dishTypes?.includes('lunch') ||
-        recipe.dishTypes?.includes('main course')
+        recipe.category?.includes('lunch') ||
+        recipe.category?.includes('main course')
       )
         return {
           name: 'Lunch',
           icon: 'https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png',
           url: '/recipe-categories/lunch',
         };
-      if (recipe.dishTypes?.includes('dessert'))
+      if (recipe.category?.includes('dessert'))
         return {
           name: 'Dessert',
           icon: 'https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e33c6ae3d69baf126f5a_icons8-cake-240.png',
           url: '/recipe-categories/dessert',
         };
       if (
-        recipe.dishTypes?.includes('beverage') ||
-        recipe.dishTypes?.includes('drink')
+        recipe.category?.includes('side') ||
+        recipe.category?.includes('drink')
       )
         return {
           name: 'Side',
@@ -106,7 +105,7 @@ class View {
           url: '/recipe-categories/drink',
         };
       return {
-        name: 'Starter',
+        name: 'Lunch',
         icon: 'https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png',
         url: '/recipes',
       };
@@ -228,7 +227,7 @@ class View {
     const categoryIcons = {
       breakfast:
         'https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2d1ff8db94df5297188_icons8-bread-240.png',
-      starter:
+      lunch:
         'https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png',
       side: 'https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e314a55677b935bd3113_icons8-the-toast-240.png',
       dessert:
