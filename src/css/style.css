@@ -672,9 +672,8 @@ button {
 .recipes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 25px;
-  grid-row-gap: 25px;
-  grid-auto-columns: 1fr;
+  gap: 25px;
+  align-items: stretch;
 }
 
 /* ==========================================
@@ -682,6 +681,14 @@ button {
 ========================================== */
 .recipe-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 600px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
 }
 
 .recipe-card__badge {
@@ -1080,6 +1087,29 @@ button {
   margin-top: var(--spacing-lg);
 }
 
+.spinner {
+  margin: 5rem auto;
+  text-align: center;
+  grid-area: 1/2;
+}
+
+.spinner-icon {
+  height: 5rem;
+  width: 5rem;
+  fill: var(--color-green);
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* ==========================================
    App Download Component
 ========================================== */
@@ -1199,10 +1229,6 @@ button {
   border-radius: 11px;
   overflow: hidden;
   transition: transform var(--transition-base);
-}
-
-.instagram-feed__item:hover {
-  transform: scale(1.05);
 }
 
 .instagram-feed__image {
@@ -1392,6 +1418,7 @@ button {
 .footer__nav-column {
   display: flex;
   flex-direction: column;
+  width: fit-content;
 }
 
 .footer__nav-list {

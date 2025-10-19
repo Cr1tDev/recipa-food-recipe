@@ -1,12 +1,14 @@
 // controller.js
 import model from './model.js';
-import view from './view.js';
+import view from './views/view.js';
+import featuredView from './views/featuredView.js';
+import recipeBookView from './views/recipeBookView.js';
+import InstagramFeedView from './views/instagramFeedView.js';
 
 const controlLoadRandomRecipes = async function () {
   try {
-    view.renderLoader(view._recipesContainer); // Show loader
-    await model.getRandomRecipes(6); // Fetch from Spoonacular
-    console.log('Random recipes:', model.state.recipes); // ✅ console output
+    view.renderLoader(view._recipesContainer);
+    await model.getRandomRecipes(6);
     view.renderRecipes(model.state.recipes);
   } catch (err) {
     console.error(err);
@@ -57,6 +59,9 @@ const controlRecipeDetails = async function (id) {
 
 export const init = function () {
   view.initGetElement();
+  featuredView.render();
+  recipeBookView.render();
+  InstagramFeedView.render();
   view.renderCategories(model.state.categories);
 
   // Add event listeners

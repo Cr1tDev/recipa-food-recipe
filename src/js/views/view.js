@@ -1,3 +1,5 @@
+import spinnerIcon from 'url:../../img/spinnerIcon.svg';
+
 class View {
   // =======================
   // DOM Element References
@@ -27,9 +29,10 @@ class View {
   // =======================
   renderLoader(container) {
     const markup = `
-      <div class="loader">
-        <div class="loader__spinner"></div>
-        <p class="loader__text">Loading delicious recipes...</p>
+      <div class="spinner">
+        <svg class="spinner-icon">
+          <use href="${spinnerIcon}#icon-loader"></use>
+        </svg>
       </div>
     `;
     if (container) container.innerHTML = markup;
@@ -122,7 +125,7 @@ class View {
       : "A delicious and nutritious recipe you'll love.";
 
     return `
-      <article class="recipe-card data-recipe-id="${recipe.id}">
+      <article class="recipe-card" data-recipe-id="${recipe.id}">
         <div class="recipe-card__badge">
           <a href="${category.url}" class="badge">
             <img
