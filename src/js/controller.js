@@ -4,6 +4,7 @@ import view from './views/view.js';
 import featuredView from './views/featuredView.js';
 import recipeBookView from './views/recipeBookView.js';
 import InstagramFeedView from './views/instagramFeedView.js';
+import BlogCardsView from './views/blogCardsView.js';
 
 const controlLoadRandomRecipes = async function () {
   try {
@@ -62,6 +63,7 @@ export const init = function () {
   featuredView.render();
   recipeBookView.render();
   InstagramFeedView.render();
+  BlogCardsView.render();
   view.renderCategories(model.state.categories);
 
   // Add event listeners

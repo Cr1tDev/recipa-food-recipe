@@ -1,49 +1,590 @@
-<section class="section">
-  <div class="section__container">
-    <header class="section__header section__header--center">
-      <div class="tag tag--center">
-        <span class="tag__bullet" aria-hidden="true"></span>
-        <span class="tag__text">All Recipes</span>
-      </div>
-      <h1 class="heading heading--large">
-        Discover Amazing <span class="heading__highlight">Recipes</span>
-      </h1>
-    </header>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipee - Discover Nutritious Recipes & Culinary Inspiration</title>
+    <meta
+      name="description"
+      content="Explore delicious and nutritious recipes, cooking tips, and culinary adventures. Join our community of food lovers and discover your next favorite dish."
+    />
+    <meta name="author" content="Recipee" />
 
-    <div class="section__content">
-      <div class="recipes">
-        <article class="recipe-card">
-          <div class="recipe-card__badge">
-            <a href="/recipe-categories/lunch" class="badge" data-link>
-              <img
-                class="badge__icon"
-                src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png"
-                alt=""
-                width="27"
-                height="27"
-              />
-              <span class="badge__text">Lunch</span>
-            </a>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Recipee - Nutritious Recipes & Culinary Inspiration"
+    />
+    <meta
+      property="og:description"
+      content="Discover delicious recipes and join our culinary community"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/recipe.css" />
+    <link rel="icon" href="../img/logo.svg" />
+    <script type="module" src="../js/script.js"></script>
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- Header -->
+      <header class="header">
+        <div class="header__container">
+          <!-- Logo -->
+          <a
+            href="/"
+            class="header__logo-link"
+            aria-label="Recipee homepage"
+            data-link
+          >
+            <img
+              class="header__logo"
+              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo.png"
+              alt="Recipee Logo"
+              width="125"
+              height="auto"
+              loading="eager"
+            />
+          </a>
+
+          <!-- Navigation -->
+          <div class="header__nav-wrapper">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a
+                    href="/"
+                    class="header__nav-link header__nav-link--active"
+                    aria-current="page"
+                    data-link
+                    >Home</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="/about" class="header__nav-link" data-link
+                    >About me</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="/recipe" class="header__nav-link" data-link
+                    >Recipes</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="/categories" class="header__nav-link" data-link
+                    >Categories</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="/news" class="header__nav-link" data-link>News</a>
+                </li>
+              </ul>
+              <div class="header__cart">
+                <a
+                  href="#"
+                  class="header__cart-link"
+                  role="button"
+                  aria-haspopup="dialog"
+                  aria-label="Open shopping cart (empty)"
+                >
+                  <span>Cart</span>
+                </a>
+              </div>
+            </nav>
           </div>
-          <a href="/recipe/vegan-quinoa" class="recipe-card__link" data-link>
-            <div class="recipe-card__image-wrapper">
+
+          <!-- Header Actions -->
+          <div class="header__actions">
+            <button
+              class="header__menu-toggle"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
               <img
-                class="recipe-card__image"
-                src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6503065aadfb7f95ff74e9a8_recipe-4.jpg"
-                alt="Vegan quinoa recipe"
+                class="header__menu-icon"
+                src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c146_icon-menu.svg"
+                alt=""
+                aria-hidden="true"
+                width="30"
+                height="30"
                 loading="lazy"
               />
+            </button>
+            <a href="/contact" class="button">
+              <span class="button__content">
+                <span class="button__text">Contact me</span>
+                <span class="button__icon-wrapper">
+                  <img
+                    class="button__icon"
+                    src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501d777e97e1de57908741e_arrow.svg"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                  />
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="header__overlay" id="mobile-menu" aria-hidden="true"></div>
+      </header>
+
+      <!-- Recipe section -->
+      <section class="hero" id="hero">
+        <div class="hero__container">
+          <!-- Section Header -->
+          <header class="section-header">
+            <div class="section-header__content">
+              <h2 class="section-header__title">
+                Featured
+                <span class="heading__highlight">recipes.</span>
+              </h2>
             </div>
-            <div class="recipe-card__content">
-              <h3 class="recipe-card__title">Vegan Quinoa Bowl</h3>
-              <p class="recipe-card__description">
-                A nutritious and delicious plant-based meal.
-              </p>
+          </header>
+
+          <!-- Recipe Card -->
+          <a href="#" class="main-recipe-card">
+            <div class="recipe-card__inner main">
+              <!-- Recipe Image -->
+              <div class="recipe-card__image-wrapper main">
+                <img
+                  src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&h=600&fit=crop"
+                  alt="Tropical sunset margarita"
+                  class="recipe-card__image main"
+                  loading="lazy"
+                />
+              </div>
+
+              <!-- Recipe Content -->
+              <div class="recipe-card__content main">
+                <div>
+                  <!-- Recipe Meta Information -->
+                  <div class="recipe-meta main">
+                    <div class="recipe-meta__item main">
+                      <img
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650300cba3d8f08049ff6aed_schedule_FILL0_wght300_GRAD0_opsz24.svg"
+                        alt="Time icon"
+                        class="recipe-meta__icon main"
+                        loading="lazy"
+                      />
+                      <p class="recipe-meta__text main">5min</p>
+                    </div>
+
+                    <div class="recipe-meta__item main">
+                      <img
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/65030090282cb8dc8d551130_account_circle_FILL0_wght300_GRAD0_opsz24.svg"
+                        alt="Servings icon"
+                        class="recipe-meta__icon main"
+                        loading="lazy"
+                      />
+                      <p class="recipe-meta__text main">2 Servings</p>
+                    </div>
+
+                    <div class="recipe-meta__item main">
+                      <img
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/65030140cda3526d9edcd88b_signal_cellular_alt_FILL0_wght300_GRAD0_opsz24.svg"
+                        alt="Difficulty icon"
+                        class="recipe-meta__icon main"
+                        loading="lazy"
+                      />
+                      <p class="recipe-meta__text main">Easy</p>
+                    </div>
+                  </div>
+
+                  <!-- Recipe Title & Description -->
+                  <h3 class="recipe-card__title main">
+                    Tropical sunset margarita
+                  </h3>
+                  <p class="recipe-card__description main">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+
+                <!-- Button -->
+                <div class="header__actions">
+                  <button
+                    class="header__menu-toggle"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                  >
+                    <img
+                      class="header__menu-icon"
+                      src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c146_icon-menu.svg"
+                      alt=""
+                      aria-hidden="true"
+                      width="30"
+                      height="30"
+                      loading="lazy"
+                    />
+                  </button>
+                  <a href="/contact" class="button">
+                    <span class="button__content">
+                      <span class="button__text">View Recipe</span>
+                      <span class="button__icon-wrapper">
+                        <img
+                          class="button__icon"
+                          src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501d777e97e1de57908741e_arrow.svg"
+                          alt=""
+                          aria-hidden="true"
+                          loading="lazy"
+                        />
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
             </div>
           </a>
-        </article>
-        <!-- Add more recipe cards here -->
-      </div>
+        </div>
+      </section>
+      <!-- Latest Recipe Section -->
+      <section class="section section--light">
+        <div class="section__container">
+          <header class="section__header section__header--flex">
+            <div class="section__header-content">
+              <h2 class="heading heading--large">
+                All <span class="heading__highlight">recipes.</span>
+              </h2>
+            </div>
+          </header>
+
+          <div class="section__content">
+            <div class="tabs">
+              <nav class="tabs__nav" role="tablist">
+                <button
+                  class="tabs__button tabs__button--active"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="latest-recipes"
+                >
+                  Latest Recipes
+                </button>
+                <button
+                  class="tabs__button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="featured-recipes"
+                >
+                  <img
+                    class="tabs__icon"
+                    src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6502f1d8f7432925aad72a97_featured.png"
+                    alt="Featured Icon"
+                    loading="lazy"
+                  />
+                  Featured Recipes
+                </button>
+              </nav>
+
+              <div class="tabs__content">
+                <div
+                  class="tabs__panel tabs__panel--active"
+                  id="latest-recipes"
+                  role="tabpanel"
+                >
+                  <!-- Add recipe dynamicly -->
+                  <div class="recipes"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Featured Section -->
+      <section class="featured" style="display: none"></section>
+      <section class="promo-section"></section>
+      <section class="instagram-section section section--light">
+        <div class="instagram-section__container">
+          <div class="instagram-feed">
+            <div class="instagram-feed__label">
+              <img
+                class="instagram-feed__icon"
+                src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c157_social-4.png"
+                alt="Instagram"
+                width="16"
+                height="16"
+                loading="lazy"
+              />
+              <span class="instagram-feed__title">Instagram</span>
+            </div>
+
+            <div class="instagram-feed__grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__grid">
+            <!-- Footer Brand & Newsletter -->
+            <div class="footer__brand">
+              <a
+                href="/"
+                class="footer__logo-link"
+                aria-label="Recipee homepage"
+              >
+                <img
+                  class="footer__logo"
+                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo.png"
+                  alt="Recipee Logo"
+                  width="110"
+                  height="auto"
+                  loading="lazy"
+                  srcset="
+                    https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo-p-500.png 500w,
+                    https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo-p-800.png 800w,
+                    https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo.png       931w
+                  "
+                />
+              </a>
+
+              <p class="footer__description">
+                Join me on a gastronomic adventure filled with nutritious and
+                delicious recipes.
+              </p>
+
+              <!-- Newsletter -->
+              <div class="footer__newsletter">
+                <h3 class="footer__title">Sign up for our newsletter</h3>
+
+                <form
+                  class="newsletter-form"
+                  id="newsletter-form"
+                  action=""
+                  method="post"
+                >
+                  <div class="newsletter-form__wrapper">
+                    <input
+                      class="newsletter-form__input"
+                      type="email"
+                      name="email"
+                      id="newsletter-email"
+                      placeholder="Enter your email..."
+                      required
+                      aria-label="Email address"
+                    />
+                    <button
+                      type="submit"
+                      class="newsletter-form__button"
+                      aria-label="Subscribe to newsletter"
+                    >
+                      <span class="u-visually-hidden">Subscribe</span>
+                    </button>
+                  </div>
+
+                  <div class="newsletter-form__success" aria-live="polite">
+                    <p>Thank you! Your subscription has been received!</p>
+                  </div>
+
+                  <div class="newsletter-form__error" aria-live="assertive">
+                    <p>Oops! Something went wrong. Please try again.</p>
+                  </div>
+                </form>
+
+                <p class="footer__copyright">© This is powered by Recipee</p>
+              </div>
+            </div>
+
+            <!-- Footer Navigation -->
+            <nav class="footer__nav">
+              <div class="footer__nav-column">
+                <h3 class="footer__title">Navigation</h3>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item">
+                    <a href="/" class="footer__link" data-link>Home</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/about-me" class="footer__link" data-link
+                      >About me</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/shop" class="footer__link" data-link>Shop</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/recipe" class="footer__link" data-link>Recipes</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/style-guide" class="footer__link" data-link
+                      >Style Guide</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/licensing" class="footer__link" data-link
+                      >Licensing</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/legal" class="footer__link" data-link>Legal</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer__nav-column">
+                <h3 class="footer__title">Categories</h3>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item">
+                    <a
+                      href="/recipe-categories/dessert"
+                      class="footer__link footer__link--icon"
+                    >
+                      <img
+                        class="footer__link-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e33c6ae3d69baf126f5a_icons8-cake-240.png"
+                        alt=""
+                        width="28"
+                        height="28"
+                        loading="lazy"
+                      />
+                      <span>Dessert</span>
+                    </a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a
+                      href="/recipe-categories/drink"
+                      class="footer__link footer__link--icon"
+                    >
+                      <img
+                        class="footer__link-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e314a55677b935bd3113_icons8-the-toast-240.png"
+                        alt=""
+                        width="28"
+                        height="28"
+                        loading="lazy"
+                      />
+                      <span>Drink</span>
+                    </a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a
+                      href="/recipe-categories/lunch"
+                      class="footer__link footer__link--icon"
+                    >
+                      <img
+                        class="footer__link-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png"
+                        alt=""
+                        width="28"
+                        height="28"
+                        loading="lazy"
+                      />
+                      <span>Lunch</span>
+                    </a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a
+                      href="/recipe-categories/breakfast"
+                      class="footer__link footer__link--icon"
+                    >
+                      <img
+                        class="footer__link-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2d1ff8db94df5297188_icons8-bread-240.png"
+                        alt=""
+                        width="28"
+                        height="28"
+                        loading="lazy"
+                      />
+                      <span>Breakfast</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer__nav-column">
+                <h3 class="footer__title">Follow me</h3>
+                <ul class="footer__social">
+                  <li class="footer__social-item">
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer__social-link"
+                      aria-label="Follow us on Twitter"
+                    >
+                      <img
+                        class="footer__social-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c14b_x-logo.png"
+                        alt="Twitter"
+                        width="22"
+                        height="22"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer__social-link"
+                      aria-label="Follow us on Facebook"
+                    >
+                      <img
+                        class="footer__social-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c149_icons8-facebook-240%20(1).png"
+                        alt="Facebook"
+                        width="22"
+                        height="22"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer__social-link"
+                      aria-label="Follow us on Instagram"
+                    >
+                      <img
+                        class="footer__social-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c157_social-4.png"
+                        alt="Instagram"
+                        width="22"
+                        height="22"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a
+                      href="https://youtube.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer__social-link"
+                      aria-label="Follow us on YouTube"
+                    >
+                      <img
+                        class="footer__social-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c143_social-3.png"
+                        alt="YouTube"
+                        width="22"
+                        height="22"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </footer>
     </div>
-  </div>
-</section>
+  </body>
+</html>

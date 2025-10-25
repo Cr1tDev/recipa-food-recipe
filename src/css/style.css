@@ -704,9 +704,11 @@ button {
   border: 1px solid transparent;
   border-radius: var(--radius-md);
   width: 100%;
+  height: 100%;
   text-decoration: none;
   overflow: hidden;
-  display: block;
+  display: flex;
+  flex-direction: column;
   transition: all var(--transition-base);
 }
 
@@ -750,6 +752,8 @@ button {
   align-items: flex-start;
   padding: var(--spacing-xl) 29px;
   display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
   position: relative;
 }
 
@@ -817,6 +821,11 @@ button {
   margin-bottom: 0;
   font-size: var(--font-size-base);
   line-height: 0.9;
+}
+
+/* Push the button to the bottom */
+.recipe-card__content .link-underline {
+  margin-top: auto;
 }
 
 /* ==========================================
@@ -1036,10 +1045,6 @@ button {
   display: block;
   text-decoration: none;
   transition: transform var(--transition-base);
-}
-
-.blog-card__link:hover {
-  transform: translateY(-5px);
 }
 
 .blog-card__image {
