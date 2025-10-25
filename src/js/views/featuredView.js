@@ -11,10 +11,7 @@ class FeaturedView {
       <div class="featured__container">
         <div class="featured__grid">
           <div class="featured__header">
-            <div class="tag">
-              <span class="tag__bullet" aria-hidden="true"></span>
-              <span class="tag__text">Featured on</span>
-            </div>
+            <custom-tag tagname="Featured on" position="right"></custom-tag>
           </div>
 
           <div class="featured__logos" role="list" aria-label="Media partners">

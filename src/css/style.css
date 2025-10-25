@@ -304,35 +304,6 @@ button {
 }
 
 /* ==========================================
-   Tag Component
-========================================== */
-.tag {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  margin-bottom: 25px;
-}
-
-.tag--center {
-  justify-content: center;
-}
-
-.tag__bullet {
-  width: 10px;
-  height: 10px;
-  border: 2px solid var(--color-green);
-  border-radius: var(--radius-full);
-  flex-shrink: 0;
-}
-
-.tag__text {
-  color: var(--color-green);
-  font-size: var(--font-size-md);
-  font-weight: 500;
-  line-height: 1.1;
-}
-
-/* ==========================================
    Heading Component
 ========================================== */
 .heading {
@@ -933,19 +904,6 @@ button {
   top: -71px;
   left: 53px;
   border-radius: 16px;
-}
-
-/* Tag Light Variant */
-.tag--light {
-  margin-bottom: 25px;
-}
-
-.tag__bullet--light {
-  border-color: var(--color-white);
-}
-
-.tag__text--light {
-  color: var(--color-white);
 }
 
 /* Button Light Variant */

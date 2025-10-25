@@ -11,10 +11,7 @@ class RecipeBook {
       <div class="promo-section__container">
         <div class="promo-card">
           <div class="promo-card__content">
-            <div class="tag tag--light">
-              <span class="tag__bullet tag__bullet--light" aria-hidden="true"></span>
-              <span class="tag__text tag__text--light">Shop my premium recipe</span>
-            </div>
+            <custom-tag tagname="Shop my premium recipe" position="right" color="light"></custom-tag>
 
             <h2 class="promo-card__title">
               Discover and indulge in my exclusive collection of gourmet recipes.
