@@ -29,11 +29,6 @@ class RecipeBook {
               alt="Premium recipe book"
               width="492"
               loading="lazy"
-              srcset="
-                https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650429de5a44aaaaccaf56e2_book-p-500.png 500w,
-                https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650429de5a44aaaaccaf56e2_book-p-800.png 800w,
-                https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650429de5a44aaaaccaf56e2_book.png 984w
-              "
             />
           </figure>
         </div>

@@ -175,7 +175,7 @@
               <div class="hero__image-container">
                 <img
                   class="hero__image"
-                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501d65c4ca71937e4aa4956_main.jpg"
+                  src="./img/hero-cooking.jpg"
                   alt="Delicious nutritious food beautifully presented"
                   width="520"
                   height="520"
@@ -297,7 +297,13 @@
 
         <!-- About Me Section -->
         <section class="about-section">
-          <div class="about-section__background"></div>
+          <div class="about-section__background">
+            <img
+              src="./img/becca.jpg"
+              alt="About me background"
+              class="about-section__background-image"
+            />
+          </div>
           <div class="about-section__container">
             <div class="about-section__grid">
               <article class="about-section__content">
@@ -467,39 +473,33 @@
               <div class="footer__newsletter">
                 <h3 class="footer__title">Sign up for our newsletter</h3>
 
-                <form
-                  class="newsletter-form"
-                  id="newsletter-form"
-                  action=""
-                  method="post"
-                >
-                  <div class="newsletter-form__wrapper">
+                <div class="subscribe-form">
+                  <form
+                    id="subscribe-form"
+                    name="subscribe-form"
+                    method="get"
+                    class="subscribe-form__form"
+                    aria-label="Subscribe"
+                  >
                     <input
-                      class="newsletter-form__input"
-                      type="email"
+                      class="subscribe-form__input"
+                      maxlength="256"
                       name="email"
-                      id="newsletter-email"
                       placeholder="Enter your email..."
+                      type="email"
+                      id="subscribe-form-email"
                       required
-                      aria-label="Email address"
                     />
-                    <button
-                      type="submit"
-                      class="newsletter-form__button"
-                      aria-label="Subscribe to newsletter"
-                    >
-                      <span class="u-visually-hidden">Subscribe</span>
-                    </button>
-                  </div>
-
-                  <div class="newsletter-form__success" aria-live="polite">
-                    <p>Thank you! Your subscription has been received!</p>
-                  </div>
-
-                  <div class="newsletter-form__error" aria-live="assertive">
-                    <p>Oops! Something went wrong. Please try again.</p>
-                  </div>
-                </form>
+                    <div class="subscribe-form__button-wrapper">
+                      <input
+                        type="submit"
+                        value=""
+                        class="subscribe-form__button"
+                        data-wait="Please wait..."
+                      />
+                    </div>
+                  </form>
+                </div>
 
                 <p class="footer__copyright">© This is powered by Recipee</p>
               </div>
