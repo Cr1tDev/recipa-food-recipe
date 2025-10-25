@@ -90,20 +90,17 @@ class CustomTagElement extends HTMLElement {
     const tag = this.root.querySelector('.tag');
     if (!tag) return;
 
-    const pos = this.position ? this.position.toLowerCase() : 'left';
+    const pos = this.position ? this.position.toLowerCase() : 'center';
 
     switch (pos) {
       case 'right':
         tag.style.justifyContent = 'flex-start';
         break;
-      case 'center':
-        tag.style.justifyContent = 'center';
-        break;
       case 'left':
         tag.style.justifyContent = 'flex-end';
         break;
       default:
-        tag.style.justifyContent = 'flex-end';
+        tag.style.justifyContent = 'center';
     }
   }
 

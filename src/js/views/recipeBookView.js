@@ -18,20 +18,7 @@ class RecipeBook {
             </h2>
 
             <div class="promo-card__action">
-              <a href="/plans-ecommerce" class="button button--light">
-                <span class="button__content">
-                  <span class="button__text">Shop Now</span>
-                  <span class="button__icon-wrapper">
-                    <img
-                      class="button__icon"
-                      src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6503134eb1cb19fd7ad46347_arrow-white.svg"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                    />
-                  </span>
-                </span>
-              </a>
+              <custom-button text="Contact Me" color="light"></custom-button>
             </div>
           </div>
 

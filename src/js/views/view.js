@@ -1,9 +1,6 @@
 import spinnerIcon from 'url:../../img/spinnerIcon.svg';
 
 class View {
-  // =======================
-  // DOM Element References
-  // =======================
   _recipesContainer = null;
   _categoriesContainer = null;
   _searchResults = null;
@@ -14,9 +11,7 @@ class View {
   _searchForm = null;
   _searchInput = null;
 
-  // =======================
   // Initialization
-  // =======================
   initGetElement() {
     this._recipesContainer = document.querySelector('.recipes');
     this._categoriesContainer = document.querySelector('.categories');
@@ -24,9 +19,7 @@ class View {
     this._searchInput = document.querySelector('[data-search-input]');
   }
 
-  // =======================
   // UI Helpers
-  // =======================
   renderLoader(container) {
     const markup = `
       <div class="spinner">
@@ -72,9 +65,7 @@ class View {
     if (container) container.innerHTML = '';
   }
 
-  // =======================
   // Recipe Card Generator
-  // =======================
   _generateRecipeCard(recipe) {
     const getCategoryInfo = () => {
       if (recipe.category?.includes('breakfast'))
@@ -208,9 +199,7 @@ class View {
     `;
   }
 
-  // =======================
   // Recipe List Rendering
-  // =======================
   renderRecipes(recipes, container = this._recipesContainer) {
     if (!container) return;
 
@@ -265,9 +254,7 @@ class View {
     this._categoriesContainer.innerHTML = markup;
   }
 
-  // =======================
   // Event Handlers
-  // =======================
   addRecipeClickHandler(handler) {
     document.addEventListener('click', e => {
       const link = e.target.closest('[data-recipe-link]');
