@@ -121,20 +121,11 @@
                 loading="lazy"
               />
             </button>
-            <a href="/contact" class="button">
-              <span class="button__content">
-                <span class="button__text">Contact me</span>
-                <span class="button__icon-wrapper">
-                  <img
-                    class="button__icon"
-                    src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501d777e97e1de57908741e_arrow.svg"
-                    alt=""
-                    aria-hidden="true"
-                    loading="lazy"
-                  />
-                </span>
-              </span>
-            </a>
+            <custom-button
+              text="Contact Me"
+              color="green"
+              href="/contact"
+            ></custom-button>
           </div>
         </div>
 
@@ -231,20 +222,11 @@
                       loading="lazy"
                     />
                   </button>
-                  <a href="/contact" class="button">
-                    <span class="button__content">
-                      <span class="button__text">View Recipe</span>
-                      <span class="button__icon-wrapper">
-                        <img
-                          class="button__icon"
-                          src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501d777e97e1de57908741e_arrow.svg"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                        />
-                      </span>
-                    </span>
-                  </a>
+                  <custom-button
+                    text="View Recipe"
+                    color="green"
+                    href="/contact"
+                  ></custom-button>
                 </div>
               </div>
             </div>
@@ -361,39 +343,33 @@
               <div class="footer__newsletter">
                 <h3 class="footer__title">Sign up for our newsletter</h3>
 
-                <form
-                  class="newsletter-form"
-                  id="newsletter-form"
-                  action=""
-                  method="post"
-                >
-                  <div class="newsletter-form__wrapper">
+                <div class="subscribe-form">
+                  <form
+                    id="subscribe-form"
+                    name="subscribe-form"
+                    method="get"
+                    class="subscribe-form__form"
+                    aria-label="Subscribe"
+                  >
                     <input
-                      class="newsletter-form__input"
-                      type="email"
+                      class="subscribe-form__input"
+                      maxlength="256"
                       name="email"
-                      id="newsletter-email"
                       placeholder="Enter your email..."
+                      type="email"
+                      id="subscribe-form-email"
                       required
-                      aria-label="Email address"
                     />
-                    <button
-                      type="submit"
-                      class="newsletter-form__button"
-                      aria-label="Subscribe to newsletter"
-                    >
-                      <span class="u-visually-hidden">Subscribe</span>
-                    </button>
-                  </div>
-
-                  <div class="newsletter-form__success" aria-live="polite">
-                    <p>Thank you! Your subscription has been received!</p>
-                  </div>
-
-                  <div class="newsletter-form__error" aria-live="assertive">
-                    <p>Oops! Something went wrong. Please try again.</p>
-                  </div>
-                </form>
+                    <div class="subscribe-form__button-wrapper">
+                      <input
+                        type="submit"
+                        value=""
+                        class="subscribe-form__button"
+                        data-wait="Please wait..."
+                      />
+                    </div>
+                  </form>
+                </div>
 
                 <p class="footer__copyright">© This is powered by Recipee</p>
               </div>

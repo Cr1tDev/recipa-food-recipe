@@ -339,6 +339,13 @@ button {
   min-height: 520px;
   border-radius: var(--radius-full);
   object-fit: cover;
+  filter: blur(10px);
+  opacity: 0.9;
+}
+
+.hero__image.loaded {
+  filter: blur(0);
+  opacity: 1;
 }
 
 .hero__play-button {
@@ -867,9 +874,16 @@ button {
 .about-section__background-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* behaves like background-size: cover */
-  object-position: center; /* same as background-position: 50% */
+  object-fit: cover;
+  object-position: center;
   display: block;
+  filter: blur(10px);
+  opacity: 0.9;
+}
+
+.about-section__background-image.loaded {
+  filter: blur(0);
+  opacity: 1;
 }
 
 .about-section__container {

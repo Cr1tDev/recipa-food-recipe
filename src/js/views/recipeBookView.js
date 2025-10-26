@@ -1,3 +1,5 @@
+import bookImg from 'url:../../img/book.webp';
+
 class RecipeBook {
   _parentEl = document.querySelector('.promo-section');
 
@@ -25,7 +27,7 @@ class RecipeBook {
           <figure class="promo-card__figure">
             <img
               class="promo-card__image"
-              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650429de5a44aaaaccaf56e2_book.png"
+              src="${bookImg || ''}"
               alt="Premium recipe book"
               width="492"
               loading="lazy"
