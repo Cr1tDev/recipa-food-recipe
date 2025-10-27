@@ -1,87 +1,682 @@
-<section class="section">
-  <div class="section__container">
-    <header class="section__header section__header--center">
-      <div class="tag tag--center">
-        <span class="tag__bullet" aria-hidden="true"></span>
-        <span class="tag__text">Get in Touch</span>
-      </div>
-      <h1 class="heading heading--large">
-        Contact <span class="heading__highlight">Me</span>
-      </h1>
-    </header>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipee - Discover Nutritious Recipes & Culinary Inspiration</title>
+    <meta
+      name="description"
+      content="Explore delicious and nutritious recipes, cooking tips, and culinary adventures. Join our community of food lovers and discover your next favorite dish."
+    />
+    <meta name="author" content="Recipee" />
 
-    <div class="section__content">
-      <div style="max-width: 600px; margin: 0 auto">
-        <p
-          style="
-            font-size: 1.125rem;
-            line-height: 1.75;
-            margin-bottom: 2rem;
-            text-align: center;
-          "
-        >
-          Have a question or want to collaborate? I'd love to hear from you!
-        </p>
-        <form style="display: flex; flex-direction: column; gap: 1.5rem">
-          <div>
-            <label
-              style="display: block; margin-bottom: 0.5rem; font-weight: 500"
-              >Name</label
-            >
-            <input
-              type="text"
-              style="
-                width: 100%;
-                padding: 0.75rem;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                font-size: 1rem;
-              "
-              placeholder="Your name"
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Recipee - Nutritious Recipes & Culinary Inspiration"
+    />
+    <meta
+      property="og:description"
+      content="Discover delicious recipes and join our culinary community"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="icon" href="../img/logo.svg" />
+    <script type="module" src="../js/script.js"></script>
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- Header -->
+      <header class="header">
+        <div class="header__container">
+          <!-- Logo -->
+          <a
+            href="/"
+            class="header__logo-link"
+            aria-label="Recipee homepage"
+            data-link
+          >
+            <img
+              class="header__logo"
+              src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo.png"
+              alt="Recipee Logo"
+              width="125"
+              height="auto"
+              loading="eager"
             />
+          </a>
+
+          <!-- Navigation -->
+          <div class="header__nav-wrapper">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a
+                    href="/"
+                    class="header__nav-link header__nav-link--active"
+                    aria-current="page"
+                    data-link
+                    >Home</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="/about" class="header__nav-link" data-link
+                    >About me</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="/recipe" class="header__nav-link" data-link
+                    >Recipes</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="/categories" class="header__nav-link" data-link
+                    >Categories</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="/news" class="header__nav-link" data-link>News</a>
+                </li>
+              </ul>
+              <div class="header__cart">
+                <a
+                  href="#"
+                  class="header__cart-link"
+                  role="button"
+                  aria-haspopup="dialog"
+                  aria-label="Open shopping cart (empty)"
+                >
+                  <span>Cart</span>
+                </a>
+              </div>
+            </nav>
           </div>
-          <div>
-            <label
-              style="display: block; margin-bottom: 0.5rem; font-weight: 500"
-              >Email</label
+
+          <!-- Header Actions -->
+          <div class="header__actions">
+            <button
+              class="header__menu-toggle"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
             >
-            <input
-              type="email"
-              style="
-                width: 100%;
-                padding: 0.75rem;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                font-size: 1rem;
-              "
-              placeholder="your@email.com"
-            />
+              <img
+                class="header__menu-icon"
+                src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c146_icon-menu.svg"
+                alt=""
+                aria-hidden="true"
+                width="30"
+                height="30"
+                loading="lazy"
+              />
+            </button>
+            <custom-button
+              text="Contact Me"
+              color="green"
+              href="/contact"
+            ></custom-button>
           </div>
-          <div>
-            <label
-              style="display: block; margin-bottom: 0.5rem; font-weight: 500"
-              >Message</label
-            >
-            <textarea
-              rows="5"
-              style="
-                width: 100%;
-                padding: 0.75rem;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                font-size: 1rem;
-                resize: vertical;
-              "
-              placeholder="Your message..."
-            ></textarea>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="header__overlay" id="mobile-menu" aria-hidden="true"></div>
+      </header>
+
+      <!-- Contact Section -->
+      <section class="contact">
+        <div class="contact__container">
+          <!-- Contact Form Grid -->
+          <div class="contact__grid">
+            <!-- Image -->
+            <div class="contact__image"></div>
+
+            <!-- Form Content -->
+            <div class="contact__content">
+              <h2 class="contact__title">
+                Get in <span class="contact__highlight">touch.</span>
+              </h2>
+
+              <!-- Form -->
+              <form class="form" id="contactForm">
+                <div class="form__grid">
+                  <!-- Full Name -->
+                  <div class="form__field">
+                    <label class="form__label" for="fullName">Full Name</label>
+                    <input
+                      class="form__input"
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      placeholder="John Doe"
+                      required
+                    />
+                  </div>
+
+                  <!-- Email -->
+                  <div class="form__field">
+                    <label class="form__label" for="email">Email</label>
+                    <input
+                      class="form__input"
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="contact@email.com"
+                      required
+                    />
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="form__field">
+                    <label class="form__label" for="phone">Phone</label>
+                    <input
+                      class="form__input"
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="+1 345-678"
+                    />
+                  </div>
+
+                  <!-- Schedule -->
+                  <div class="form__field">
+                    <label class="form__label" for="schedule"
+                      >Schedule to receive call</label
+                    >
+                    <input
+                      class="form__input"
+                      type="text"
+                      id="schedule"
+                      name="schedule"
+                      placeholder="10:00 AM to 4:00 PM"
+                    />
+                  </div>
+
+                  <!-- Submit Button -->
+                  <button type="submit" class="form__submit">Contact me</button>
+
+                  <!-- Success Message -->
+                  <div
+                    class="form__message form__message--success"
+                    id="successMessage"
+                  >
+                    Thanks for reaching out. We will get back to you soon.
+                  </div>
+
+                  <!-- Error Message -->
+                  <div
+                    class="form__message form__message--error"
+                    id="errorMessage"
+                  >
+                    Oops! Something went wrong while submitting the form.
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-          <button type="submit" class="button" style="align-self: flex-start">
-            <span class="button__content">
-              <span class="button__text">Send Message</span>
-            </span>
-          </button>
-        </form>
-      </div>
+
+          <!-- Spacer -->
+          <div class="spacer"></div>
+
+          <!-- FAQ Section -->
+          <div class="faq">
+            <!-- FAQ Header -->
+            <div class="faq__header">
+              <div class="faq__tag">
+                <div class="faq__bullet"></div>
+                <div class="faq__label">FAQ</div>
+              </div>
+              <h2 class="faq__title">Frequently asked questions</h2>
+            </div>
+
+            <!-- FAQ Accordion List -->
+            <div class="faq__list">
+              <!-- Accordion Item 1 -->
+              <div class="accordion accordion--open">
+                <button class="accordion__toggle" type="button">
+                  <div class="accordion__question">
+                    General questions about our recipes
+                  </div>
+                  <div class="accordion__icon">
+                    <img
+                      class="accordion__icon-img"
+                      src="https://cdn.prod.website-files.com/619f5eb73edb835d991b0881/61a790bab05b982126cc227a_icons8-plus-240.png"
+                      alt="Toggle"
+                    />
+                  </div>
+                </button>
+                <div class="accordion__content">
+                  <p class="accordion__answer">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 2 -->
+              <div class="accordion">
+                <button class="accordion__toggle" type="button">
+                  <div class="accordion__question">
+                    Getting started: FAQ for new learners
+                  </div>
+                  <div class="accordion__icon">
+                    <img
+                      class="accordion__icon-img"
+                      src="https://cdn.prod.website-files.com/619f5eb73edb835d991b0881/61a790bab05b982126cc227a_icons8-plus-240.png"
+                      alt="Toggle"
+                    />
+                  </div>
+                </button>
+                <div class="accordion__content">
+                  <p class="accordion__answer">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 3 -->
+              <div class="accordion">
+                <button class="accordion__toggle" type="button">
+                  <div class="accordion__question">
+                    Technical queries and troubleshooting
+                  </div>
+                  <div class="accordion__icon">
+                    <img
+                      class="accordion__icon-img"
+                      src="https://cdn.prod.website-files.com/619f5eb73edb835d991b0881/61a790bab05b982126cc227a_icons8-plus-240.png"
+                      alt="Toggle"
+                    />
+                  </div>
+                </button>
+                <div class="accordion__content">
+                  <p class="accordion__answer">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 4 -->
+              <div class="accordion">
+                <button class="accordion__toggle" type="button">
+                  <div class="accordion__question">
+                    Pricing and payment information
+                  </div>
+                  <div class="accordion__icon">
+                    <img
+                      class="accordion__icon-img"
+                      src="https://cdn.prod.website-files.com/619f5eb73edb835d991b0881/61a790bab05b982126cc227a_icons8-plus-240.png"
+                      alt="Toggle"
+                    />
+                  </div>
+                </button>
+                <div class="accordion__content">
+                  <p class="accordion__answer">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 5 -->
+              <div class="accordion">
+                <button class="accordion__toggle" type="button">
+                  <div class="accordion__question">
+                    Certifications and recipes completion
+                  </div>
+                  <div class="accordion__icon">
+                    <img
+                      class="accordion__icon-img"
+                      src="https://cdn.prod.website-files.com/619f5eb73edb835d991b0881/61a790bab05b982126cc227a_icons8-plus-240.png"
+                      alt="Toggle"
+                    />
+                  </div>
+                </button>
+                <div class="accordion__content">
+                  <p class="accordion__answer">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Instagram Section -->
+      <section class="instagram-section section section--light">
+        <div class="instagram-section__container">
+          <div class="instagram-feed">
+            <div class="instagram-feed__label">
+              <img
+                class="instagram-feed__icon"
+                src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c157_social-4.png"
+                alt="Instagram"
+                width="16"
+                height="16"
+                loading="lazy"
+              />
+              <span class="instagram-feed__title">Instagram</span>
+            </div>
+
+            <div class="instagram-feed__grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__grid">
+            <!-- Footer Brand & Newsletter -->
+            <div class="footer__brand">
+              <a
+                href="/"
+                class="footer__logo-link"
+                aria-label="Recipee homepage"
+              >
+                <img
+                  class="footer__logo"
+                  src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo.png"
+                  alt="Recipee Logo"
+                  width="110"
+                  height="auto"
+                  loading="lazy"
+                  srcset="
+                    https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo-p-500.png 500w,
+                    https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo-p-800.png 800w,
+                    https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo.png       931w
+                  "
+                />
+              </a>
+
+              <p class="footer__description">
+                Join me on a gastronomic adventure filled with nutritious and
+                delicious recipes.
+              </p>
+
+              <!-- Newsletter -->
+              <div class="footer__newsletter">
+                <h3 class="footer__title">Sign up for our newsletter</h3>
+
+                <div class="subscribe-form">
+                  <form
+                    id="subscribe-form"
+                    name="subscribe-form"
+                    method="get"
+                    class="subscribe-form__form"
+                    aria-label="Subscribe"
+                  >
+                    <input
+                      class="subscribe-form__input"
+                      maxlength="256"
+                      name="email"
+                      placeholder="Enter your email..."
+                      type="email"
+                      id="subscribe-form-email"
+                      required
+                    />
+                    <div class="subscribe-form__button-wrapper">
+                      <input
+                        type="submit"
+                        value=""
+                        class="subscribe-form__button"
+                        data-wait="Please wait..."
+                      />
+                    </div>
+                  </form>
+                </div>
+
+                <p class="footer__copyright">© This is powered by Recipee</p>
+              </div>
+            </div>
+
+            <!-- Footer Navigation -->
+            <nav class="footer__nav">
+              <div class="footer__nav-column">
+                <h3 class="footer__title">Navigation</h3>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item">
+                    <a href="/" class="footer__link" data-link>Home</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/about-me" class="footer__link" data-link
+                      >About me</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/shop" class="footer__link" data-link>Shop</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/recipe" class="footer__link" data-link>Recipes</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/style-guide" class="footer__link" data-link
+                      >Style Guide</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/licensing" class="footer__link" data-link
+                      >Licensing</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="/legal" class="footer__link" data-link>Legal</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer__nav-column">
+                <h3 class="footer__title">Categories</h3>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item">
+                    <a
+                      href="/recipe-categories/dessert"
+                      class="footer__link footer__link--icon"
+                    >
+                      <img
+                        class="footer__link-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e33c6ae3d69baf126f5a_icons8-cake-240.png"
+                        alt=""
+                        width="28"
+                        height="28"
+                        loading="lazy"
+                      />
+                      <span>Dessert</span>
+                    </a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a
+                      href="/recipe-categories/drink"
+                      class="footer__link footer__link--icon"
+                    >
+                      <img
+                        class="footer__link-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e314a55677b935bd3113_icons8-the-toast-240.png"
+                        alt=""
+                        width="28"
+                        height="28"
+                        loading="lazy"
+                      />
+                      <span>Drink</span>
+                    </a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a
+                      href="/recipe-categories/lunch"
+                      class="footer__link footer__link--icon"
+                    >
+                      <img
+                        class="footer__link-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2f3fbcadab05d250a8b_icons8-pizza-240.png"
+                        alt=""
+                        width="28"
+                        height="28"
+                        loading="lazy"
+                      />
+                      <span>Lunch</span>
+                    </a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a
+                      href="/recipe-categories/breakfast"
+                      class="footer__link footer__link--icon"
+                    >
+                      <img
+                        class="footer__link-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c089/6502e2d1ff8db94df5297188_icons8-bread-240.png"
+                        alt=""
+                        width="28"
+                        height="28"
+                        loading="lazy"
+                      />
+                      <span>Breakfast</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer__nav-column">
+                <h3 class="footer__title">Follow me</h3>
+                <ul class="footer__social">
+                  <li class="footer__social-item">
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer__social-link"
+                      aria-label="Follow us on Twitter"
+                    >
+                      <img
+                        class="footer__social-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c14b_x-logo.png"
+                        alt="Twitter"
+                        width="22"
+                        height="22"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer__social-link"
+                      aria-label="Follow us on Facebook"
+                    >
+                      <img
+                        class="footer__social-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c149_icons8-facebook-240%20(1).png"
+                        alt="Facebook"
+                        width="22"
+                        height="22"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer__social-link"
+                      aria-label="Follow us on Instagram"
+                    >
+                      <img
+                        class="footer__social-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c157_social-4.png"
+                        alt="Instagram"
+                        width="22"
+                        height="22"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a
+                      href="https://youtube.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer__social-link"
+                      aria-label="Follow us on YouTube"
+                    >
+                      <img
+                        class="footer__social-icon"
+                        src="https://cdn.prod.website-files.com/6501c88eb0eaccde56b0c083/6501c88eb0eaccde56b0c143_social-3.png"
+                        alt="YouTube"
+                        width="22"
+                        height="22"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </footer>
+      <script>
+        // Accordion functionality
+        const accordions = document.querySelectorAll('.accordion');
+
+        accordions.forEach(accordion => {
+          const toggle = accordion.querySelector('.accordion__toggle');
+
+          toggle.addEventListener('click', () => {
+            const isOpen = accordion.classList.contains('accordion--open');
+
+            // Close all accordions
+            accordions.forEach(item => {
+              item.classList.remove('accordion--open');
+            });
+
+            // Open clicked accordion if it was closed
+            if (!isOpen) {
+              accordion.classList.add('accordion--open');
+            }
+          });
+        });
+
+        // Form submission
+        const form = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+
+          // Hide messages
+          successMessage.style.display = 'none';
+          errorMessage.style.display = 'none';
+
+          // Simulate form submission
+          setTimeout(() => {
+            // Show success message
+            successMessage.style.display = 'block';
+
+            // Reset form
+            form.reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+              successMessage.style.display = 'none';
+            }, 5000);
+          }, 500);
+        });
+      </script>
     </div>
-  </div>
-</section>
+  </body>
+</html>

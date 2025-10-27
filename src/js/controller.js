@@ -60,10 +60,10 @@ const controlRecipeDetails = async function (id) {
 
 export const init = function () {
   view.initGetElement();
-  featuredView.render();
   recipeBookView.render();
   InstagramFeedView.render();
   BlogCardsView.render();
+  featuredView.render();
   view.renderCategories(model.state.categories);
 
   // Add event listeners

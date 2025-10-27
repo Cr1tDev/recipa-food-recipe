@@ -2,6 +2,8 @@ class FeaturedView {
   _parentEl = document.querySelector('.featured');
 
   render() {
+    if (!this._parentEl) return;
+
     const markup = this._generateMarkup();
     this._parentEl.innerHTML = markup;
   }
