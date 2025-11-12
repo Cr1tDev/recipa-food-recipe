@@ -20,7 +20,7 @@ class RecipeBook {
             </h2>
 
             <div class="promo-card__action">
-              <custom-button text="Contact Me" color="light"></custom-button>
+              <custom-button text="Contact Me" color="light" href="./pages/contact.html"></custom-button>
             </div>
           </div>
 
